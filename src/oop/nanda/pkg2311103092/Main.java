@@ -8,9 +8,9 @@ import java.util.Scanner;
 
 /**
  *
- * @author nanda
+ * @author Nanda Novianto Alfah Rizky
  */
-public class OOPNanda2311103092 {
+public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

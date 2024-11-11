@@ -6,7 +6,7 @@ package oop.nanda.pkg2311103092;
 
 /**
  *
- * @author nanda
+ * @author Nanda Novianto Alfah Rizky
  */
 public class KomputerVIP extends Komputer {
 
