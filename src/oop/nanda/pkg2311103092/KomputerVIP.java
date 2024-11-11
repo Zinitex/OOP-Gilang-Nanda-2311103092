@@ -12,8 +12,8 @@ public class KomputerVIP extends Komputer {
 
     protected boolean vipCard;
 
-    public KomputerVIP(int jumlahKomputer, String namaWarnet, float hargaPerJam, boolean vipCard) {
-        super(jumlahKomputer, namaWarnet, hargaPerJam);
+    public KomputerVIP(int idKomputer, String namaWarnet, float hargaPerJam, boolean vipCard) {
+        super(idKomputer, namaWarnet, hargaPerJam);
         this.vipCard = vipCard;
     }
 

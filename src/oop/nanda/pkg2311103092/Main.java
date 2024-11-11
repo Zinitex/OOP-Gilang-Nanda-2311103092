@@ -15,28 +15,50 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         
-        KomputerPremium kom1 = new KomputerPremium(20, "Warnet Gaming", 5000, false); 
-        KomputerPremium kom2 = new KomputerPremium(20, "Warnet Gaming", 5000, true);        
-        KomputerVIP kom3 = new KomputerVIP(15, "Warnet Gaming", 7000, false);
-        KomputerVIP kom4 = new KomputerVIP(15, "Warnet Gaming", 7000, true); 
+        Object[][] accounts = {
+            {"Nanda", "123123", true},
+            {"Nindi", "123123", false},
+            {"Nandi", "123123", true}
+        };
         
-        String username = "Nanda";
-        String password = "123123";
+        KomputerPremium kom1 = new KomputerPremium(33, "Warnet Gaming", 5000, false); 
+        KomputerPremium kom2 = new KomputerPremium(44, "Warnet Gaming", 5000, true);        
+        KomputerVIP kom3 = new KomputerVIP(55, "Warnet Gaming", 7000, false);
+        KomputerVIP kom4 = new KomputerVIP(66, "Warnet Gaming", 7000, true); 
+        
+        String username = "a";
         boolean logged = false;
+        boolean isVIP = false;
   
         do {
-            System.out.print("Username\t: ");
-            String akun = scanner.next();
-            System.out.print("Password\t: ");
-            String pass = scanner.next();
+            System.out.println("");
+            System.out.print("Username: ");
+            String inputUsername = scanner.next();
+            System.out.print("Password: ");
+            String inputPassword = scanner.next();
             
-            if (akun.equals(username) && pass.equals(password)) {
-                logged = true;
-            } else {
-                System.out.println("Username / Password Salah, coba ulang lagi.");
+            for (Object[] account : accounts) {
+                String storedUsername = (String) account[0];
+                String storedPassword = (String) account[1];
+                boolean storedIsVIP = (boolean) account[2];
+
+                if (inputUsername.equals(storedUsername) && inputPassword.equals(storedPassword)) {
+                    username = storedUsername;
+                    logged = true;
+                    isVIP = storedIsVIP;
+                    System.out.println("");
+                    break; 
+                }
+            }
+
+            if (!logged) {
+                System.out.println("Username atau Password salah, silahkan coba lagi.");
             }
         } while (!logged);
         
+        System.out.println("Selamat Datang, " + username + "\nAnda adalah " + (isVIP ? "Member VIP" : "Member Standar"));
+        
+        System.out.println("");
         kom1.informasi();
         kom2.informasi();
         kom3.informasi();

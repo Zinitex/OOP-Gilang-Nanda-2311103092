@@ -11,8 +11,8 @@ package oop.nanda.pkg2311103092;
 public class KomputerPremium extends Komputer {
     protected boolean ruangPrivat;
 
-    public KomputerPremium(int jumlahKomputer, String namaWarnet, float hargaPerJam, boolean ruangPrivat) {
-        super(jumlahKomputer, namaWarnet, hargaPerJam);
+    public KomputerPremium(int idKomputer, String namaWarnet, float hargaPerJam, boolean ruangPrivat) {
+        super(idKomputer, namaWarnet, hargaPerJam);
         this.ruangPrivat = ruangPrivat;
     }
 
