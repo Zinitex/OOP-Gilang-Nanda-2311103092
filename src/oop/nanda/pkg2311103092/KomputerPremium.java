@@ -35,14 +35,14 @@ public class KomputerPremium extends Komputer {
     }
 
     public void pesan(int nomorKomputer) {
-        System.out.println("Computer number " + nomorKomputer + " has been reserved.");
+        System.out.println("Komputer nomor " + nomorKomputer + " berhasil direservasi.");
     }
 
     public void tambahLayanan(String makanan) {
-        System.out.println("Added service: Food - " + makanan);
+        System.out.println("Makanan - " + makanan);
     }
 
     public void tambahLayanan(String makanan, String minuman) {
-        System.out.println("Added service: Food - " + makanan + ", Drink - " + minuman);
+        System.out.println("Makanan - " + makanan + ", Minuman - " + minuman);
     }
 }

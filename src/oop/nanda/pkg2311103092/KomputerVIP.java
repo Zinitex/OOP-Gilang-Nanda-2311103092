@@ -33,14 +33,14 @@ public class KomputerVIP extends Komputer {
     }
 
     public void login(String username) {
-        System.out.println("User " + username + " logged in.");
+        System.out.println("User " + username + " Berhasil Login.");
     }
 
     public void bermain(int jam) {
-        System.out.println("Playing for " + jam + " hours.");
+        System.out.println("Bermain Selama " + jam + " Jam.");
     }
 
     public void bermain(int jam, int menitTambahan) {
-        System.out.println("Playing for " + jam + " hours and " + menitTambahan + " additional minutes.");
+        System.out.println("Bermain Selama " + jam + " Jam, " + menitTambahan + " Menit.");
     }
 }

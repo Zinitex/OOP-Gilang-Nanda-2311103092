@@ -63,6 +63,61 @@ public class Main {
         kom2.informasi();
         kom3.informasi();
         kom4.informasi();
+        
+        while (true) {
+            System.out.println("\nMenu Pilihan:");
+            System.out.println("1. Bermain Komputer");
+            System.out.println("2. Pesan Komputer");
+            System.out.println("3. Tambah Layanan");
+            System.out.println("4. Keluar");
+            System.out.print("Pilih opsi: ");
+            int choice = scanner.nextInt();
+
+            switch (choice) {
+                case 1:
+                    System.out.print("Masukkan durasi bermain (jam): ");
+                    int jam = scanner.nextInt();
+                    if (isVIP) {
+                        kom3.bermain(jam);
+                    }
+                    break;
+                    
+                case 2:
+                    System.out.print("Masukkan nomor komputer yang ingin dipesan: ");
+                    int nomorKomputer = scanner.nextInt();
+                    if (!isVIP) {
+                        kom1.pesan(nomorKomputer);
+                    }
+                    break;
+                    
+                case 3:
+                    System.out.print("Masukkan makanan yang ingin ditambah: ");
+                    String makanan = scanner.next();
+                    System.out.print("Apakah Anda ingin menambahkan minuman? (y/n): ");
+                    String tambahMinuman = scanner.next();
+                    if (tambahMinuman.equalsIgnoreCase("y")) {
+                        System.out.print("Masukkan minuman yang ingin ditambah: ");
+                        String minuman = scanner.next();
+                        if (!isVIP) {
+                            kom1.tambahLayanan(makanan, minuman);
+                        }
+                    } else {
+                        if (!isVIP) {
+                            kom1.tambahLayanan(makanan);
+                        }
+                    }
+                    break;
+                    
+                case 4:
+                    System.out.println("Terima kasih telah menggunakan layanan kami!");
+                    scanner.close();
+                    return;
+
+                default:
+                    System.out.println("Pilihan tidak valid. Silakan coba lagi.");
+            }
+        }
+    
     }
     
 }
